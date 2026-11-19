@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Marko Petrovic",
+        "mail": "marko.petrovic@gmail.com",
+        "phone": "+381 64 123 4567",
+        "country": "Serbia"
+    },
+    {
+        "name": "Milica Stojanovic",
+        "mail": "milica.stojanovic@gmail.com",
+        "phone": "+381 61 555 0199",
+        "country": "Serbia"
+    },
+    {
+        "name": "Teodora Kovacevic",
+        "mail": "teodora.kovacevic@gmail.com",
+        "phone": "+381 69 222 1100",
+        "country": "Serbia"
+    },
+    {
+        "name": "Katarina Zivkovic",
+        "mail": "katarina.zivkovic@gmail.com",
+        "phone": "+381 63 111 2233",
+        "country": "Serbia"
+    },
+    {
+        "name": "Ivana Simic",
+        "mail": "ivana.simic@gmail.com",
+        "phone": "+381 66 909 8080",
+        "country": "Serbia"
+    },
+    {
+        "name": "Aleksandar Todorovic",
+        "mail": "aleksandar.todorovic@hotmail.com",
+        "phone": "+381 64 321 6540",
+        "country": "Serbia"
+    },
+    {
+        "name": "Maja Vasic",
+        "mail": "maja.vasic@gmail.com",
+        "phone": "+381 65 654 3210",
+        "country": "Serbia"
+    },
+    {
+        "name": "Vukasin Krstic",
+        "mail": "vukasin.krstic@gmail.com",
+        "phone": "+381 62 404 5050",
+        "country": "Serbia"
+    },
+    {
+        "name": "Filip Bogdanovic",
+        "mail": "filip.bogdanovic@gmail.com",
+        "phone": "+381 64 512 3498",
+        "country": "Serbia"
+    },
+    {
+        "name": "Jovana Maric",
+        "mail": "jovana.maric@gmail.com",
+        "phone": "+381 63 876 5432",
+        "country": "Serbia"
+    },
+    {
+        "name": "Elena Djukic",
+        "mail": "elena.djukic@gmail.com",
+        "phone": "+381 69 700 8000",
+        "country": "Serbia"
+    }
+]
