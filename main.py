@@ -65,6 +65,7 @@ def filterContacts():
                 f.write(added_message + contact + '\n')
     with open('correctFormat.json', 'w') as f:
         json.dump(list_of_correct_contacts, f,indent=4,ensure_ascii=False)
+    bubble()
 
 def GetValidContacts():
     try:
@@ -82,11 +83,33 @@ def GetFaultyContacts():
         updated_contacts.append(contact.strip())
     return updated_contacts if updated_contacts else []
 
+def bubble():
+    with open('correctFormat.json') as f:
+        contacts = json.load(f)
+    for i in range(len(contacts), 0, -1):
+        status = False
+        for j in range(i - 1):
+            if contacts[j]['name'] > contacts[j + 1]['name']:
+                contacts[j], contacts[j + 1] = contacts[j + 1], contacts[j]
+                status = True
+        if not status:
+            break
+    return contacts
+
+def get_contacts_with_surname():
+    sur = input("Enter surname: ")
+    possible_answers = []
+    for contact in GetValidContacts():
+        if re.match(rf"[A-za-z]+ {sur}", contact['name']):
+            possible_answers.append(contact)
+    return "No such surname" if not possible_answers else possible_answers
+
 def main():
     while True:
         print("1: Filter Contacts")
         print("2: Get Valid Formated Contacts")
         print("3: Get Wrong Formated Contacts")
+        print("4: Search by surname")
         print("0: Exit")
         x = int(input("Enter your choice: "))
         if x == 1:
@@ -95,7 +118,18 @@ def main():
             print(GetValidContacts())
         elif x == 3:
             print(GetFaultyContacts())
+        elif x == 4:
+            print(get_contacts_with_surname())
         else:
+            correct = GetValidContacts()
+            faulty = GetFaultyContacts()
+            print(f"Number of all contacts: {len(correct) + len(faulty)}|Number of correct contacts: {len(correct)}|Number of faulty contacts: {len(faulty)}")
+            countries = {'Serbia':0, 'Croatia':0, 'BiH':0}
+            for cor in correct:
+                countries[cor['country']] += 1
+            print(countries)
             return
 
 
+
+main()
